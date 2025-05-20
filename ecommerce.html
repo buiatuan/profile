@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng E-Commerce - Bùi Anh Tuấn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch" id="themeSwitch">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="project-detail">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Quay lại
+        </a>
+
+        <div class="project-header">
+            <h1>Ứng Dụng E-Commerce</h1>
+            <div class="project-tech">
+                <span>Spring Cloud</span>
+                <span>Docker</span>
+                <span>Cassandra</span>
+                <span>Kubernetes</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-section">
+                <h2>Tổng Quan</h2>
+                <p>Nền tảng thương mại điện tử hiện đại được xây dựng trên kiến trúc microservices, cho phép mở rộng quy mô linh hoạt và xử lý lượng lớn giao dịch. Hệ thống được thiết kế để đảm bảo hiệu suất cao và độ tin cậy trong môi trường sản xuất.</p>
+            </div>
+
+            <div class="project-section">
+                <h2>Tính Năng Chính</h2>
+                <ul>
+                    <li>Quản lý sản phẩm và danh mục</li>
+                    <li>Hệ thống giỏ hàng và thanh toán</li>
+                    <li>Tích hợp nhiều cổng thanh toán</li>
+                    <li>Quản lý đơn hàng tự động</li>
+                    <li>Hệ thống khuyến mãi và giảm giá</li>
+                    <li>Báo cáo doanh thu và phân tích</li>
+                    <li>Tích hợp tìm kiếm nâng cao</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2>Công Nghệ Sử Dụng</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Services</h3>
+                        <ul>
+                            <li>Spring Cloud</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Security</li>
+                            <li>Spring Cloud Gateway</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & Cache</h3>
+                        <ul>
+                            <li>Cassandra</li>
+                            <li>Redis</li>
+                            <li>Elasticsearch</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-docker"></i>
+                        <h3>DevOps & Cloud</h3>
+                        <ul>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>AWS Services</li>
+                            <li>CI/CD Pipeline</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoring</h3>
+                        <ul>
+                            <li>Prometheus</li>
+                            <li>Grafana</li>
+                            <li>ELK Stack</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Thách Thức & Giải Pháp</h2>
+                <div class="challenge">
+                    <h3>Xử lý đơn hàng đồng thời</h3>
+                    <p>Giải pháp: Sử dụng event-driven architecture với Kafka để xử lý bất đồng bộ và đảm bảo tính nhất quán dữ liệu.</p>
+                </div>
+                <div class="challenge">
+                    <h3>Mở rộng hệ thống</h3>
+                    <p>Giải pháp: Triển khai trên Kubernetes với auto-scaling và load balancing để xử lý tải cao.</p>
+                </div>
+                <div class="challenge">
+                    <h3>Tối ưu hiệu suất</h3>
+                    <p>Giải pháp: Implement caching nhiều lớp, CDN và tối ưu hóa database queries.</p>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Kết Quả Đạt Được</h2>
+                <ul>
+                    <li>Xử lý được 10,000+ đơn hàng/giờ</li>
+                    <li>Thời gian phản hồi API < 100ms</li>
+                    <li>Uptime 99.99%</li>
+                    <li>Giảm 40% chi phí vận hành</li>
+                    <li>Tăng 200% doanh số trong 6 tháng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

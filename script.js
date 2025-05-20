@@ -150,3 +150,44 @@ document.addEventListener('DOMContentLoaded', function() {
         headerObserver.observe(document.querySelector('header'));
     }
 });
+
+// Lưu vị trí scroll khi rời khỏi trang chủ
+window.addEventListener('beforeunload', function() {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        sessionStorage.setItem('scrollPosition', window.scrollY);
+    }
+});
+
+// Khôi phục vị trí scroll khi quay lại trang chủ
+window.addEventListener('load', function() {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        const scrollPosition = sessionStorage.getItem('scrollPosition');
+        if (scrollPosition) {
+            window.scrollTo(0, parseInt(scrollPosition));
+            sessionStorage.removeItem('scrollPosition');
+        }
+    }
+});
+
+// Thêm nút scroll to top
+const scrollToTopBtn = document.createElement('button');
+scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+scrollToTopBtn.className = 'scroll-to-top';
+document.body.appendChild(scrollToTopBtn);
+
+// Hiển thị/ẩn nút scroll to top
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+// Xử lý sự kiện click vào nút scroll to top
+scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
